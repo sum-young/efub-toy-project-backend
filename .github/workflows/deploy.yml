@@ -31,7 +31,7 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             cd /home/ubuntu/efub-toy-project-backend 
-            git pull origin deploy
+            git pull origin main
             ./gradlew bootJar -x test
             sudo fuser -k 8080/tcp || true
             nohup java -Dfile.encoding=UTF-8 \
