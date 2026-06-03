@@ -36,8 +36,8 @@ jobs:
             sudo fuser -k 8080/tcp || true
             nohup java -Dfile.encoding=UTF-8 \
               -DRDS_ENDPOINT=${{ secrets.RDS_ENDPOINT }} \
-              -DRDS_USERNAME=${{ secrets.RDS_USERNAME }} \
-              -DRDS_PASSWORD=${{ secrets.RDS_PASSWORD }} \
+              -DDB_USERNAME=${{ secrets.RDS_USERNAME }} \
+              -DDB_PASSWORD=${{ secrets.RDS_PASSWORD }} \
               -jar build/libs/twitter_toy_project-0.0.1-SNAPSHOT.jar \
               > /home/ubuntu/app.log 2>&1 &
             
