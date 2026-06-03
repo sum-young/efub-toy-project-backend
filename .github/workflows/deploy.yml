@@ -35,5 +35,5 @@ jobs:
             ./gradlew bootJar -x test
             sudo fuser -k 8080/tcp || true
             nohup java -Dfile.encoding=UTF-8 \
-              -jar build/libs/efub-toy-project-backend-0.0.1-SNAPSHOT.jar \
+              -jar build/libs/twitter_toy_project-0.0.1-SNAPSHOT.jar \
               > /home/ubuntu/app.log 2>&1 &
